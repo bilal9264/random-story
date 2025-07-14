@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HMARA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe4f2, #fddde6);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3.5em;
+      color: #c71585;
+      text-shadow: 2px 2px #fff;
+      font-weight: bold;
+    }
+
+    .gif {
+      width: 280px;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(199, 21, 133, 0.3);
+    }
+    .cigarette {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      position: relative;
+    }
+    .filter {
+      width: 30px;
+      height: 24px;
+      background: linear-gradient(to right, #e2a76f, #d28f5c);
+      border-radius: 10px 0 0 10px;
+    }
+       .body {
+      width: 140px;
+      height: 24px;
+      background: #f5f5f5;
+      border-radius: 0 10px 10px 0;
+      border-left: 2px solid #ccc;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #d63384;
+      font-size: 14px;
+      text-shadow: 1px 1px white;
+      overflow: hidden;
+    }
+
+    .ash {
+      width: 10px;
+      height: 24px;
+      background: #555;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      right: -10px;
+      top: 0;
+    }
+
+    /* Multiple Cracks */
+    .crack {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #aa336a;
+      top: 0;
+      transform-origin: center;
+      opacity: 0;
+    }
+
+    .crack1 { left: 20%; transform: rotate(-15deg); }
+    .crack2 { left: 40%; transform: rotate(15deg); }
+    .crack3 { left: 60%; transform: rotate(-25deg); }
+    .crack4 { left: 80%; transform: rotate(10deg); }
+
+    /* Animation when broken */
+    .cigarette.broken {
+      animation: shatter 0.6s forwards;
+    }
+
+    .cigarette.broken .crack {
+      animation: appear 0.3s forwards;
+    }
+
+    @keyframes shatter {
+      to {
+        transform: rotate(20deg) scale(0.9);
+        opacity: 0;
+      }
+    }
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+      }
+    }
+
+    p {
+      margin: 30px 20px 10px;
+      font-size: 1.2em;
+      color: #5c004f;
+      max-width: 700px;
+      line-height: 1.6em;
+    }
+
+    .highlight {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #a1007e;
+    }
+     .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HMARA</h1>
+
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWJpemNvb3Y5eHZuOWk2a2pldWtsYXhxM3Q2azY4MzkzdXh0bzc0dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NBTKrXUZYB1PnKygQz/giphy.gif"
+    alt="Cute Gif 1"
+  />
+
+  <p>
+    You remember the day when we met in Roblox — we both were hiking Antarctica and I dumb somehow died 😭 and poor me was spectating you hahah.
+    <span class="highlight">Then this Hmar Got an Idea. Why not ask this Hmara about her Instagram.</span>
+  </p>
+
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWJpemNvb3Y5eHZuOWk2a2pldWtsYXhxM3Q2azY4MzkzdXh0bzc0dCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/KBY0BfYrvAYZQAkUP5/giphy.gif"
+    alt="Cute Gif 2"
+  />
+
+  <!-- New Paragraph Section -->
+  <p>
+    Then Hmar got Hmara's Instagram and they used to text each other everyday.  
+    Soon they reached a point where they were best friends.  
+    They shared their everyday hobbies, meals, blah blah together like they were kinda close to each other as friends.  
+    Then one day, HMAR gets to know that HMARA has BPD personality.  
+    HMAR had no idea what the actual hell is BPD😭😭, probably thinking BPD is some kinda food or fruit or maybe a toy — LMAO😂.  
+    Nothing to laugh, he was dumb that time🤧🤧. The Hmara said it is a disorder.
+    <span class="highlight">This Was the first thing going on HMAR mind when he heard a disorder</span>
+  </p>
+
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGdwNmdmN3ZqaGp0c3dyM2hrcjU0MDFsbGxlcTQ5N3E3NDBlbXlyeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/owpEDvbyUxjylNUder/giphy.gif"
+    alt="Funny Reaction Gif"
+  />
+
+  <span class="highlight">OR THIS</span>
+
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGdwNmdmN3ZqaGp0c3dyM2hrcjU0MDFsbGxlcTQ5N3E3NDBlbXlyeSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/8WCAJ4RrWJtYEcQPtb/giphy.gif"
+    alt="Funny Reaction Gif 2"
+  />
+
+ <!-- Cigarette Button -->
+  <div class="cigarette" id="cigaretteBtn" onclick="breakCigarette()">
+    <div class="filter"></div>
+    <div class="body">
+      CARRY ON 💖
+      <div class="ash"></div>
+      <div class="crack crack1"></div>
+      <div class="crack crack2"></div>
+      <div class="crack crack3"></div>
+      <div class="crack crack4"></div>
+    </div>
+  </div>
+   <script>
+    function breakCigarette() {
+      const btn = document.getElementById('cigaretteBtn');
+      btn.classList.add('broken');
+      setTimeout(() => {
+        window.location.href = "page3.html";
+      }, 1000);
+    }
+  </script>
+   <script>
+    const emojis = ["🌸", "🎊", "🌸", "🎉", "🌸", "✨"];
+    const count = 40;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("div");
+      el.classList.add("falling");
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (4 + Math.random() * 3) + "s";
+      el.style.fontSize = (20 + Math.random() * 20) + "px";
+      document.body.appendChild(el);
+    }
+  </script>
+</body>
+</html>

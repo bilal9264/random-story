@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page 3</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd6ec);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      margin: 40px 20px 20px;
+      font-size: 2.5em;
+      color: #c71585;
+      text-shadow: 2px 2px #fff;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 30px 20px 10px;
+      font-size: 1.2em;
+      color: #5c004f;
+      max-width: 700px;
+      line-height: 1.6em;
+    }
+
+    .gif {
+      width: 280px;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(199, 21, 133, 0.3);
+    }
+    .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Heading -->
+  <h1>COMEBACK TOMORROW FOR NEXT PART I CAN'T CODE 5000 LINES A DAY</h1>
+
+  <!-- Funny Giphy -->
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2ZndGZtOThkaGgybzkxeTlweDIza3RheGF5bmVpcmx2dGFiYWpzdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MMGx2wau5mRE1eP5ap/giphy.gif"
+    alt="Tired coder gif"
+  />
+
+  <!-- Paragraph -->
+  <p>
+    OR MAYBE send me your cute pictures on insta — maybe that will fund the next episode or next part of this story. 😏
+  </p>
+
+  <!-- Cute reaction Giphy -->
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2FwbHJtcXRtNGMzNTJ3YTl3ZDNqZ3NsbHlyYmYzc2J4MXl0YTM4MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/98MaHVwJOmWMz4cz1K/giphy.gif"
+    alt="Blush gif"
+  />
+
+  <!-- Final heading -->
+  <h2>FINALLYY</h2>
+
+  <!-- Final gif -->
+  <img
+    class="gif"
+    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2FwbHJtcXRtNGMzNTJ3YTl3ZDNqZ3NsbHlyYmYzc2J4MXl0YTM4MSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/8jjRg1hofHLTdZr9LL/giphy.gif"
+    alt="Final hug gif"
+  />
+ <h2>SEE YA IN NEXT PART AND LOVE YA ALOT💟</h2>
+  <script>
+    const emojis = ["🌸", "🎊", "🌸", "🎉", "🌸", "✨"];
+    const count = 40;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("div");
+      el.classList.add("falling");
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (4 + Math.random() * 3) + "s";
+      el.style.fontSize = (20 + Math.random() * 20) + "px";
+      document.body.appendChild(el);
+    }
+  </script>
+</body>
+</html>

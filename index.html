@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Sara</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffb6c1, #ffe4e1, #ffc0cb);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 3em;
+      margin: 20px;
+      font-weight: bold;
+      text-shadow: 2px 2px #fff0f5;
+    }
+
+    .gif {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+
+    .cigarette {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      position: relative;
+    }
+
+    .filter {
+      width: 30px;
+      height: 24px;
+      background: linear-gradient(to right, #e2a76f, #d28f5c);
+      border-radius: 10px 0 0 10px;
+    }
+
+    .body {
+      width: 140px;
+      height: 24px;
+      background: #f5f5f5;
+      border-radius: 0 10px 10px 0;
+      border-left: 2px solid #ccc;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #d63384;
+      font-size: 14px;
+      text-shadow: 1px 1px white;
+      overflow: hidden;
+    }
+
+    .ash {
+      width: 10px;
+      height: 24px;
+      background: #555;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      right: -10px;
+      top: 0;
+    }
+
+    /* Multiple Cracks */
+    .crack {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: #aa336a;
+      top: 0;
+      transform-origin: center;
+      opacity: 0;
+    }
+
+    .crack1 { left: 20%; transform: rotate(-15deg); }
+    .crack2 { left: 40%; transform: rotate(15deg); }
+    .crack3 { left: 60%; transform: rotate(-25deg); }
+    .crack4 { left: 80%; transform: rotate(10deg); }
+
+    /* Animation when broken */
+    .cigarette.broken {
+      animation: shatter 0.6s forwards;
+    }
+
+    .cigarette.broken .crack {
+      animation: appear 0.3s forwards;
+    }
+
+    @keyframes shatter {
+      to {
+        transform: rotate(20deg) scale(0.9);
+        opacity: 0;
+      }
+    }
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .message {
+      margin-top: 20px;
+      color: #800080;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+
+    /* Corner Stickers */
+    .corner {
+      position: absolute;
+      width: 80px;
+      height: auto;
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+    .bottom-right { bottom: 10px; right: 10px; }
+    .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corner Stickers -->
+  <img class="corner top-left" src="https://media.giphy.com/media/ltGJldQh48VZtfVgfB/giphy.gif" alt="Sticker" />
+  <img class="corner top-right" src="https://media.giphy.com/media/ltGJldQh48VZtfVgfB/giphy.gif" alt="Sticker" />
+  <img class="corner bottom-left" src="https://media.giphy.com/media/ltGJldQh48VZtfVgfB/giphy.gif" alt="Sticker" />
+  <img class="corner bottom-right" src="https://media.giphy.com/media/ltGJldQh48VZtfVgfB/giphy.gif" alt="Sticker" />
+
+  <!-- Heading -->
+  <h1>For my one and only Sara</h1>
+
+  <!-- Center GIF -->
+  <img class="gif" src="https://media.giphy.com/media/ltGJldQh48VZtfVgfB/giphy.gif" alt="Cute Gif" />
+
+  <!-- Cigarette Button -->
+  <div class="cigarette" id="cigaretteBtn" onclick="breakCigarette()">
+    <div class="filter"></div>
+    <div class="body">
+      Click me 💖
+      <div class="ash"></div>
+      <div class="crack crack1"></div>
+      <div class="crack crack2"></div>
+      <div class="crack crack3"></div>
+      <div class="crack crack4"></div>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="message">
+    Let's continue, there is something awaiting for my beautiful girl.
+  </div>
+
+  <!-- Script -->
+  <script>
+    function breakCigarette() {
+      const btn = document.getElementById('cigaretteBtn');
+      btn.classList.add('broken');
+      setTimeout(() => {
+        window.location.href = "page2.html";
+      }, 1000);
+    }
+  </script>
+   </script>
+   <script>
+    const emojis = ["🌸", "🎊", "🌸", "🎉", "🌸", "✨"];
+    const count = 40;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("div");
+      el.classList.add("falling");
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (4 + Math.random() * 3) + "s";
+      el.style.fontSize = (20 + Math.random() * 20) + "px";
+      document.body.appendChild(el);
+    }
+  </script>
+
+</body>
+</html>
