@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DAY 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #ffeef4;
+      color: #d63384;
+      overflow-x: hidden;
+    }
+
+    #passwordScreen {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #passwordScreen img {
+      width: 180px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    input[type="password"] {
+      padding: 10px 20px;
+      border: 2px solid #ff9ecf;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #ffaad4;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    #mainContent {
+      display: none;
+      padding: 30px 20px;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1, h2, p, img, .image-row {
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .fade-delay-1 { animation-delay: 0.2s; }
+    .fade-delay-2 { animation-delay: 0.4s; }
+    .fade-delay-3 { animation-delay: 0.6s; }
+    .fade-delay-4 { animation-delay: 0.8s; }
+    .fade-delay-5 { animation-delay: 1s; }
+    .fade-delay-6 { animation-delay: 1.2s; }
+    .fade-delay-7 { animation-delay: 1.4s; }
+    .fade-delay-8 { animation-delay: 1.6s; }
+    .fade-delay-9 { animation-delay: 1.8s; }
+    .fade-delay-10 { animation-delay: 2s; }
+    .fade-delay-11 { animation-delay: 2.2s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 30px;
+      color: #c2185b;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .image-row img {
+      width: 45%;
+      max-width: 250px;
+      border-radius: 15px;
+    }
+
+    img.single {
+      width: 60%;
+      max-width: 280px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password Screen -->
+  <div id="passwordScreen">
+    <img src="password view.jpeg" alt="Cute Image">
+    <h2>Enter the Secret Password 💖</h2>
+    <input type="password" id="passwordInput" placeholder="Password..." />
+    <div class="hint">Send a cute smiling picture of yours to HMAR and get the password 💌</div>
+    <button onclick="checkPassword()">Unlock</button>
+    <div id="errorMessage" class="error"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent">
+    <h1 class="fade-delay-1">Welcome back to day 2</h1>
+
+    <p class="fade-delay-2">
+      Last time Hmar get to know Hmara has a BPD.They talk alot day by day. But one day HMAR noticed 
+       something strange . Sometimes HMARA do ignore HMAR text that hmar dont like it but he still had 
+       some soft spot for her so he  kept it up with HMARA. The strange thing HMAR noticed about HMARA was
+       that they were talking like normal or funny thing and suddenly out of nowhere HMARA gets mad like 
+       crazzyyy for no reason . HMAR often went hours to thinking if he said something wrong or bad HMAR was
+       so bad at english that makes him thing thrice before saying something difficult or serious .But the thing 
+       i was amused of was the sudden getting angry of HMAARA. When she gets angry HMAR tries diffrent ways and
+       say sorry for times after times  that is pretty thinkable that if HMAR Sorried atleast twice to his EX- 
+       HMAR might be in a relationship till now JAJAJAJAJ, And then after all of this  Hmara told and explained all about.  
+      But the most unique and interesting thing Hmar found out about BPD is the mood swings of HMARA.
+      Right now HMARA
+    </p>
+
+    <h2 class="fade-delay-3">LOOK LIKE THIS</h2>
+    <div class="image-row fade-delay-4">
+      <img src="happy1.jpeg" alt="Mood 1">
+      <img src="happy2.jpeg" alt="Mood 2">
+    </div>
+
+    <h2 class="fade-delay-5">The next moment HAMARA look like this</h2>
+    <div class="image-row fade-delay-6">
+      <img src="angry1.jpeg" alt="Mood 3">
+      <img src="angry2.jpeg" alt="Mood 4">
+    </div>
+
+    <h2 class="fade-delay-7">And after sometime HMARA mood be like</h2>
+    <img class="single fade-delay-8" src="cigratte1.jpeg" alt="Mood 5">
+
+    <h2 class="fade-delay-9">AND SOMETIMES</h2>
+    <img class="single fade-delay-10" src="love1.jpeg" alt="Mood 6">
+
+    <p class="fade-delay-11">
+      And the worst thing is sometimes HMARA gets so sad for no reason and don't want to talk to anyone, not even to HMAR , HMAR lives
+      very very far from HMARA so he cant  reach HMARA home so he kepp texting and texting HMARA like 2000 texts
+      a time but still no respond from HMARA  😭 So sad NAH? 
+      Look this is how HMARA looks like in her sad period .
+    </p>
+    <img class="single fade-delay-11" src="sad1.jpeg" alt="Sad Moment">
+
+    <p class="fade-delay-11">
+      You might be wondering if this is HMARA then how does HMAR look like?  
+      Well I look like this:
+    </p>
+    <img class="single fade-delay-11" src="hmar.jpeg" alt="HMAR Look">
+
+    <h2 class="fade-delay-11">It's Enough for today. I could write a whole book on you. Comeback tomorrow</h2>
+
+    <h2 class="fade-delay-11">And Keep Smiling like this 😊 LOVE YA ALOT I MEAN it 💟</h2>
+    <img class="single fade-delay-11" src="keepsmiling.jpeg" alt="Smile">
+  </div>
+
+  <!-- Falling Confetti + Flower Emojis -->
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value.trim().toLowerCase();
+      const error = document.getElementById("errorMessage");
+      if (input === "cutesara") {
+        document.getElementById("passwordScreen").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+        launchFallingEmojis();
+      } else {
+        error.textContent = "Wrong password! Try again 💔";
+      }
+    }
+
+    function launchFallingEmojis() {
+      const emojis = ["🌸", "💖", "✨"];
+      for (let i = 0; i < 40; i++) {
+        const emoji = document.createElement("div");
+        emoji.className = "falling";
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (5 + Math.random() * 5) + "s";
+        emoji.style.fontSize = (20 + Math.random() * 10) + "px";
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        document.body.appendChild(emoji);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WOHOOO</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd6ec);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #c71585;
+      text-shadow: 2px 2px #fff;
+      margin-bottom: 40px;
+    }
+
+    .next-button {
+      padding: 15px 30px;
+      background-color: #ffaad4;
+      color: white;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .next-button:hover {
+      background-color: #f57db0;
+    }
+
+    .falling {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Let's Move to DAY 2 💗</h1>
+  <button class="next-button" onclick="goToPage4()">Go to Page 4 ➜</button>
+
+  <script>
+    function goToPage4() {
+      window.location.href = "page4.html";
+    }
+
+    const emojis = ["🌸", "🎊", "🌸", "🎉", "🌸", "✨"];
+    const count = 40;
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement("div");
+      el.classList.add("falling");
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (4 + Math.random() * 3) + "s";
+      el.style.fontSize = (20 + Math.random() * 20) + "px";
+      document.body.appendChild(el);
+    }
+  </script>
+</body>
+</html>
